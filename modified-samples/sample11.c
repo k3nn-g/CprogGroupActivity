@@ -29,8 +29,8 @@ void main(){ //begin main program
     printf("All records\n");
 
     //using fread only reads binary data, thus the used of fscanf
-    while (fscanf(fp, "%s %d %f", myfriend.name, &myfriend.age, &myfriend.wage) == 3) {
-        // display values
+    while(fread(&myfriend, sizeof(struct record), 1,fp) == 1){
+        //reading a file
         printf("\n%s %d %.2f", myfriend.name, myfriend.age, myfriend.wage);
     }
     
