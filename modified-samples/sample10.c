@@ -3,16 +3,16 @@
 #include<process.h>
 
 struct record {  //structure definition 
-char name[50];
-int age;
-float wage;
+    char name[50];
+    int age;
+    float wage;
 };
 
 void main() { //begin main program
     FILE *fp; //file declaration
     
     struct record myfriend; //structure declaration
-    char file[12];
+    char file[50];
     int a;
 
     printf("Enter filename: ");
